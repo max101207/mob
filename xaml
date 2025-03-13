@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HW.MainPage">
+    <Grid Padding="20" RowSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- First Row -->
+        <HorizontalStackLayout Grid.Row="0" Spacing="10" HorizontalOptions="Center">
+            <Label Text="Vertical" VerticalOptions="Center"/>
+            <Button Text="Start" Clicked="OnVerticalStart"/>
+            <Button Text="Center" Clicked="OnVerticalCenter"/>
+            <Button Text="End" Clicked="OnVerticalEnd"/>
+        </HorizontalStackLayout>
+
+        <!-- Second Row -->
+        <HorizontalStackLayout Grid.Row="1" Spacing="10" HorizontalOptions="Center">
+            <Label Text="Horizontal" VerticalOptions="Center"/>
+            <Button Text="Start" Clicked="OnHorizontalStart"/>
+            <Button Text="Center" Clicked="OnHorizontalCenter"/>
+            <Button Text="End" Clicked="OnHorizontalEnd"/>
+        </HorizontalStackLayout>
+
+        <!-- Third Row -->
+        <Image x:Name="target" Grid.Row="2" HeightRequest="120" WidthRequest="120" Source="burger1.jpg"/>
+    </Grid>
+</ContentPage>
